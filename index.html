@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2023 PURPOSE | NUDAKE</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Faustina:wght@700&display=swap" rel="stylesheet">
+  <!-- Faust 폰트 파일을 직접 첨부하려면, 파일을 업로드 후 @font-face로 연결할 수 있습니다. 필요시 안내해드릴 수 있습니다. -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="logo"><img src="./4x/tit.png" alt="NUDAKE" style="height: 40px; vertical-align: middle;"></div>
+    <nav>
+      <ul>
+        <li><a href="#">STORES</a></li>
+        <li><a href="#">MENU</a></li>
+        <li><a href="#">PROJECTS</a></li>
+        <li><a href="#">SOCIAL</a></li>
+        <li><a href="#">SEARCH</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="hr-separator"></div>
+  <main>
+    <div class="media-row">
+      <img src="./4x/image1.png" alt="image1" class="media-half">
+      <video src="./4x/mov1.mp4" class="media-half" autoplay loop muted playsinline></video>
+    </div>
+    <div class="gradient-section">
+      <div class="centered-text">
+        <div class="purpose-title">Purpose</div>
+        <div class="purpose-desc">'사용자=도구' 즉 행위의 주체가 되는 퍼포먼스 기반 디저트 경험을 기획하고자 했습니다.<br>포크 그릴즈와 나이프 핑거캡을 통해 기존 식기구의 개념을 해체하고 본능적인 방식을 제안합니다.</div>
+      </div>
+      <div class="image-row">
+        <div class="image-container">
+          <img src="./4x/image2.png" alt="image2" class="sub-image">
+          <div class="image-overlay">
+            <div style="font-weight:bold; font-size:1.1em; margin-bottom:10px;">Fork Grillz</div>
+            고개를 숙여 단단한 겉면을 부시고<br>입 주변을 타고 흐르는 감각을 즐길 수 있습니다
+          </div>
+        </div>
+        <div class="image-container">
+          <img src="./4x/image3.png" alt="image3" class="sub-image">
+          <div class="image-overlay">
+            <div style="font-weight:bold; font-size:1.1em; margin-bottom:10px;">Knife Fingercap</div>
+            손끝으로 가르고 찌르며<br>정교한 분해를 가능하게 합니다
+          </div>
+        </div>
+      </div>
+      <div class="dessert-title">Dessert</div>
+      <div class="dessert-desc">은은한 광택이 흐르는 단단한 겉을 깨면 부드러운 블루베리 콩포트와 시럽으로 채워진 케이크</div>
+      <div class="carousel-section">
+        <button class="carousel-arrow left" id="leftArrow" onclick="prevSlide()" title="이전 이미지">
+          <svg width="40" height="40" viewBox="0 0 40 40"><polyline points="28,10 14,20 28,30" fill="none" stroke="#D1D1D1" stroke-width="1" stroke-linecap="square" stroke-linejoin="miter"/></svg>
+        </button>
+        <div class="carousel-image-container">
+          <img src="./4x/a.png" alt="carousel" class="carousel-image" id="carouselImage">
+          <div class="carousel-overlay" id="carouselOverlay">
+            밤이 되면 사라지거나<br>물린 자국이 선명하게 남아 있는 조각상들
+          </div>
+        </div>
+        <button class="carousel-arrow right" id="rightArrow" onclick="nextSlide()" title="다음 이미지">
+          <svg width="40" height="40" viewBox="0 0 40 40"><polyline points="12,10 26,20 12,30" fill="none" stroke="#D1D1D1" stroke-width="1" stroke-linecap="square" stroke-linejoin="miter"/></svg>
+        </button>
+      </div>
+    </div>
+    <script src="carousel.js"></script>
+  </main>
+  <footer>
+    <div>
+      IICombined Co., Ltd. | Business Registration Number: 119-86-38589<br>
+      Representative: Hangook Kim | 41, Eoulmadang-Ro 5-Gil, Mapo-Gu, Seoul
+    </div>
+    <div>©NUDAKE</div>
+  </footer>
+</body>
+</html> 
