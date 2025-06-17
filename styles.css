@@ -1,0 +1,308 @@
+@font-face {
+  font-family: 'FaustMephisto';
+  src: url('./4x/Faust-&MephistoRegular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'nudake';
+  src: url('./4x/hy헤드라인m.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.media-row {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.media-half {
+  width: 50vw;
+  height: 100vh;
+  object-fit: cover;
+  display: block;
+}
+
+/* 기존 main 스타일 제거 */
+main {
+  padding: 0;
+  margin: 0;
+  display: block;
+  height: auto;
+}
+
+/* 나머지 기존 스타일 유지 */
+body {
+  margin: 0;
+  font-family: 'Noto Sans KR', sans-serif;
+  background: #fff;
+  color: #222;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 64px 0 64px;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  font-family: 'nudake', 'Noto Sans KR', sans-serif;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 32px;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: #222;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: color 0.2s;
+  font-family: 'nudake', 'Noto Sans KR', sans-serif;
+}
+
+nav a:hover {
+  color: #888;
+}
+
+footer {
+  text-align: center;
+  padding: 32px 0 16px 0;
+  font-size: 0.95rem;
+  color: #888;
+  line-height: 1.6;
+}
+
+.centered-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 96px 0 0 0;
+  text-align: center;
+}
+
+.purpose-title {
+  font-family: 'FaustMephisto', 'Noto Sans KR', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 32px;
+  color: #D1D1D1;
+}
+
+.purpose-desc {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 0.7rem;
+  color: #D1D1D1;
+  line-height: 1.8;
+  margin-top: 0;
+}
+
+.dessert-title {
+  font-family: 'FaustMephisto', 'Noto Sans KR', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-top: 220px;
+  margin-bottom: 32px;
+  color: #D1D1D1;
+  text-align: center;
+}
+
+.dessert-desc {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 0.7rem;
+  color: #D1D1D1;
+  line-height: 1.8;
+  text-align: center;
+  margin-bottom: -260px;
+  margin-top: 0;
+}
+
+.gradient-section {
+  width: 100vw;
+  min-height: 400px;
+  background: #7C181D;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 64px;
+}
+
+.image-row {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.image-container {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  background: transparent;
+  border-radius: 12px;
+}
+
+.sub-image {
+  max-width: 400px;
+  width: 40vw;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  background: transparent;
+  transition: transform 0.4s cubic-bezier(.4,2,.6,1), filter 0.3s, border-radius 0.4s;
+  display: block;
+  will-change: transform, filter, border-radius;
+}
+
+.image-overlay {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 0.7rem;
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background: rgba(30, 30, 30, 0.55);
+  border-radius: 12px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+  text-align: center;
+  padding: 24px;
+  z-index: 2;
+  overflow: hidden;
+}
+
+.image-container:hover .sub-image {
+  transform: scale(1.07);
+  filter: brightness(0.6) saturate(1.2);
+  border-radius: 12px;
+}
+
+.image-container:hover .image-overlay {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.carousel-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 48px 0 32px 0;
+  gap: 24px;
+}
+
+.carousel-arrow {
+  background: none;
+  border: none;
+  color: #D1D1D1;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: color 0.2s;
+  user-select: none;
+  -webkit-user-select: none;
+  margin: 0 -8px;
+}
+.carousel-arrow:hover {
+  color: #fff;
+}
+
+.carousel-arrow.disabled {
+  opacity: 0.3;
+  pointer-events: none;
+  cursor: default;
+}
+
+.carousel-image-container {
+  position: relative;
+  width: 900px;
+  height: 900px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  overflow: hidden;
+  margin-top: -40px;
+}
+
+.carousel-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 16px;
+  transition: opacity 0.3s;
+  display: block;
+}
+
+.carousel-image::after {
+  content: '';
+  position: absolute;
+  left: 20%;
+  top: 20%;
+  width: 60%;
+  height: 60%;
+  z-index: 10;
+  pointer-events: auto;
+}
+
+.carousel-overlay {
+  position: absolute;
+  left: 18%;
+  top: 18%;
+  right: 18%;
+  bottom: 18%;
+  width: 64%;
+  height: 64%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 0.7rem;
+  background: rgba(124, 24, 29, 0.85);
+  border-radius: 16px;
+  opacity: 0;
+  pointer-events: none;
+  text-align: center;
+  padding: 24px;
+  transition: opacity 0.3s;
+}
+
+.carousel-image-container:hover .carousel-overlay {
+  opacity: 1;
+  pointer-events: none;
+}
+
+.carousel-image-container:hover .carousel-image {
+  opacity: 0.2;
+}
+
+.carousel-image.overlay-active {
+  opacity: 0.2;
+}
+
+.hr-separator {
+  width: 100vw;
+  height: 1.5px;
+  background: #222;
+  margin: 0;
+  border: none;
+} 
